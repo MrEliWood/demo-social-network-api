@@ -1,13 +1,14 @@
 # Social Network API &nbsp; ![MIT License](https://img.shields.io/badge/license-MIT-green)
+
+<br>
     
 ## Description
 
-This Social Network API uses MongoDB to build the foundation for NoSQL social network. Out of the box, users are able to share thoughts, react to thoughts, and connect with friends.
+This Social Network API uses MongoDB to build the foundation for a NoSQL social network. Out of the box, users are able to share thoughts, react to thoughts, and connect with friends.
 
 <br>
 
 ## Video Walkthrough
-
 
 <br>
 
@@ -21,7 +22,7 @@ This Social Network API uses MongoDB to build the foundation for NoSQL social ne
 
 * [Installation](#installation)
 * [Usage](#usage)
-   - [Start Guide](#usage)
+   - [Start Guide](#start-the-server)
    - [User Routes](#user-routes)
    - [Friend Routes](#friend-routes)
    - [Thought Routes](#thought-routes)
@@ -50,14 +51,13 @@ In our examples, we'll be using [Insomnia](https://insomnia.rest).
 
 ### Start the Server
 ---
-From a command line, navigate to this directory then run "node index.js".
+From a command line, navigate to this directory then run "node index.js". This should start the server.
 
-   * This should start the server.
-   * If successful, you'll see this confirmation message in the terminal:
+If successful, you'll see this confirmation message in the terminal:
 
          Social Network API server running on port 3001!
 
-   * If you're running the server on a different port, the number will change accordingly.
+If you're running the server on a different port, the number will change accordingly.
 
 <br>
 <br>
@@ -116,16 +116,16 @@ The API will respond with data for every user, in a formatted JSON.
          "friendCount": 3
       },
       {
-		"thoughts": [],
-		"_id": "628ae356302256825f426bad",
-		"username": "trainingwheels",
-		"email": "myspace4lyfe@aol.com",
-		"friends": [
-			"628ae356302256825f426ba8",
-			"628ae356302256825f426bad"
-		],
-		"friendCount": 2
-	}
+         "thoughts": [],
+         "_id": "628ae356302256825f426bad",
+         "username": "trainingwheels",
+         "email": "myspace4lyfe@aol.com",
+         "friends": [
+            "628ae356302256825f426ba8",
+            "628ae356302256825f426bad"
+         ],
+         "friendCount": 2
+	   }
    ]
 ```
 
@@ -176,7 +176,7 @@ Test the following `PUT` route with Insomnia:
 The API will expect the request body to include an updated username OR email address OR both.
 
 ```json
-   // example
+   // example  /api/users/628ae356302256825f426ba8
    {
       "username": "theradishwizard",
       "email": "radishfan@gmail.com"
@@ -190,6 +190,10 @@ The API will expect the request body to include an updated username OR email add
 Test the following `DELETE` route with Insomnia:
 
       /api/users/<User ID>
+
+```json
+   // example  /api/users/628ae356302256825f426ba8
+```
 
 <br>
 
@@ -321,7 +325,7 @@ The API will respond with data for every thought, in a formatted JSON.
          "username": "theradishwizard",
          "reactions": [
             {
-               "reactionBody": "like",
+               "reactionBody": "love this",
                "username": "trainingwheels",
                "_id": "628ae356302256825f426baf",
                "createdAt": "2022-05-23T01:28:54.783Z"
@@ -337,7 +341,7 @@ The API will respond with data for every thought, in a formatted JSON.
          "username": "catlover2002",
          "reactions": [
             {
-               "reactionBody": "cool",
+               "reactionBody": "so funny",
                "username": "trainingwheels",
                "_id": "628ae356302256825f426bbb",
                "createdAt": "2022-05-23T01:28:54.805Z"
@@ -377,7 +381,7 @@ The API will respond with data for only the selected thought, in a formatted JSO
          "username": "theradish56",
          "reactions": [
             {
-               "reactionBody": "like",
+               "reactionBody": "love this",
                "username": "trainingwheels",
                "_id": "628ae356302256825f426baf",
                "createdAt": "2022-05-23T01:28:54.783Z"

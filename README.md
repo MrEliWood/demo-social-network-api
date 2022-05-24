@@ -10,6 +10,8 @@ This Social Network API uses MongoDB to build the foundation for a NoSQL social 
 
 ## Video Walkthrough
 
+[![Link to walkthrough video](./assets/walkthrough-thumbnail.png)](https://youtu.be/YudJ6WuqEPU)
+
 <br>
 
 ## Screenshot
